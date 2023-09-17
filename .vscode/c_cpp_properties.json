@@ -4,7 +4,7 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/Users/blackfur/opt/sdk/**"
+                "${HOME}/RandomProjects/ClasspadDev/cross/sdk/include"
             ],
             "defines": [],
             "macFrameworkPath": [
@@ -12,8 +12,9 @@
             ],
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c17",
-            "cppStandard": "c++98",
-            "intelliSenseMode": "macos-clang-arm64"
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-clang-arm64",
+            "configurationProvider": "ms-vscode.makefile-tools"
         }
     ],
     "version": 4

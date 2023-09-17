@@ -27,35 +27,6 @@ void main() {
 
 	fillScreen(BLUE);
 
-	for (int y=0; y < 256; y++) {
-		for (int x=0; x<320; x++) {
-			int MiddlePoint = 160;
-			int RoadWidth = 96;
-			int ClipWidth = 30;
-
-			int LeftGrass = (MiddlePoint - RoadWidth - ClipWidth);
-			int LeftClip = (MiddlePoint - RoadWidth);
-			int RightClip = (MiddlePoint + RoadWidth);
-			int RightGrass = (MiddlePoint + RoadWidth + ClipWidth);
-
-			if (x >= 0 && x < LeftGrass) {
-				LCD_SetPixel(x, y + 272, LIGHT_GREEN);
-			}
-			if (x >= LeftGrass && x < LeftClip) {
-				LCD_SetPixel(x, y + 272, LIGHT_RED);
-			}
-			if (x >= LeftClip && x < RightClip) {
-				LCD_SetPixel(x, y + 272, GREY);
-			}
-			if (x >= RightClip && x < RightGrass) {
-				LCD_SetPixel(x, y + 272, LIGHT_RED);
-			}
-			if (x >= RightGrass && x < 320) {
-				LCD_SetPixel(x, y + 272, LIGHT_GREEN);
-			}
-		}
-	}
-
 	LCD_Refresh();
 
 	//Example for getKey
